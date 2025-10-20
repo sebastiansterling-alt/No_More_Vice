@@ -1,0 +1,226 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9fafb;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e9d5ff;
+}
+
+/* ===== SECCIONES GENERALES ===== */
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #1f2937;
+}
+
+/* ===== SECCIÓN INICIO ===== */
+#inicio {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+#inicio h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* ===== ACORDEÓN ===== */
+.accordion {
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Botón */
+.accordion-btn {
+    width: 100%;
+    padding: 16px;
+    text-align: left;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.accordion-btn:hover {
+    background: linear-gradient(135deg, #5b67e5, #6e3ba2);
+}
+
+/* Contenido oculto */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: white;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 16px;
+}
+
+/* Cuando está activo */
+.accordion.active .accordion-content {
+    max-height: 600px; /* suficiente para mostrar el contenido */
+    padding: 16px;
+}
+
+/* Subtemas */
+.subtema {
+    margin-top: 16px;
+    padding: 12px;
+    border-left: 4px solid #7c3aed;
+    background: #f3e8ff;
+    border-radius: 6px;
+}
+
+.subtema h4 {
+    margin-bottom: 6px;
+    color: #7c3aed;
+    font-size: 18px;
+}
+
+/* ===== ESTADÍSTICAS ===== */
+#estadisticas #progreso-usuario {
+    margin-top: 20px;
+    padding: 30px;
+    background: #eef2ff;
+    border: 2px dashed #7c3aed;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 500;
+    color: #4c1d95;
+}
+
+/* ===== FORMULARIOS ===== */
+form {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #5b67e5, #6e3ba2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 24px;
+    margin-top: 40px;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #inicio h2 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 60px 15px;
+    }
+
+    form {
+        width: 90%;
+    }
+}
